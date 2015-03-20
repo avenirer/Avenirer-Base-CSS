@@ -52,7 +52,9 @@ img { -ms-interpolation-mode: bicubic; image-rendering: optimizeQuality; }
 
 .container{width: 100%;max-width: 1010px; margin:auto;}
 
-.row:before, .row:after{content: "";display:table;clear:both;}
+.group { zoom: 1; overflow: auto; }
+.group:before, .group:after { content: ''; display: table; }
+.group:after { clear: both; }
 
 .clearfix:after {content: "."; visibility: hidden; display: block; height: 0; clear: both;}
 
@@ -74,10 +76,6 @@ nav ul { list-style: none; }
 
 .hidden { text-indent: -999em; }
 .block.hidden { position: absolute; left: -999em; top: -999em; }
-
-.group { zoom: 1; overflow: auto; }
-.group:before, .group:after { content: ''; display: table; }
-.group:after { clear: both; }
 	
 .ghost { opacity: .5; filter: alpha(opacity=50); }
 .ghost.super { opacity: .2; filter: alpha(opacity=20); }
